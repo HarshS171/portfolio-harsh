@@ -114,3 +114,27 @@ setInterval(() => {
     setTimeout(() => { hn.style.textShadow = ''; }, 70 + Math.random()*60);
   }
 }, 1800);
+
+// Animate progress bars on scroll
+  function animateBars() {
+    document.querySelectorAll('.sk-card').forEach(card => {
+      const bar = card.querySelector('.bar');
+      if (bar) {
+        const width = bar.getAttribute('data-width');
+        bar.style.setProperty('--target-width', width + '%');
+      }
+    });
+  }
+
+  // Trigger when section comes into view
+  const skillsSection = document.getElementById('skills');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateBars();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (skillsSection) observer.observe(skillsSection);
