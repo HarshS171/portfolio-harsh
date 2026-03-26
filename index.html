@@ -1,882 +1,1061 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Portfolio — Your Name</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Harsh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css">
 </head>
+
 <body>
 
-<canvas id="grid-canvas"></canvas>
-<div id="cur"></div>
-<div id="cur-ring"></div>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="#hero" class="nav-logo"><span class="bk">[</span>PORTFOLIO<span class="acc">.</span>HARSH<span class="bk">]</span></a>
-  <ul class="nav-links">
-    <li><a href="#about"><span class="n">01</span>About</a></li>
-    <li><a href="#skills"><span class="n">02</span>Skills</a></li>
-    <li><a href="#projects"><span class="n">03</span>Projects</a></li>
-    <li><a href="#exp"><span class="n">04</span>Education</a></li>
-    <li><a href="#contact"><span class="n">05</span>Contact</a></li>
-  </ul>
-  <div class="nav-glow"></div>
-</nav>
+  <!-- Liquid Glass Orbs -->
+  <div class="orb-glass orb-cyan"></div>
+  <div class="orb-glass orb-gold"></div>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg-n">01</div>
-  <div class="hero-vline"></div>
-
-  <p class="hero-eyebrow">Open to Opportunities &nbsp;·&nbsp; Based in Kanpur, India</p>
-
-  <h1 class="hero-name" id="heroName">
-    <span class="solid">HARSH</span>
-    <span class="outline">SHUKLA</span>
-    <!-- <span class="solid">NAME</span> -->
-  </h1>
-
-  <p class="hero-sub">Aspiring BTech Graduate — passionate about building sharp, meaningful digital experiences and ready to turn skills into real-world impact.</p>
-
-  <div class="hero-actions">
-    <a href="#projects" class="btn btn-primary">View Projects &#8594;</a>
-    <a href="#contact" class="btn btn-outline">Hire Me</a>
+  <!-- 3D Background Figures -->
+  <div class="bg-3d-figures">
+    <img src="3d_figure_cyan.png" class="fig-3d fig-cyan" alt="">
+    <img src="3d_figure_gold.png" class="fig-3d fig-gold" alt="">
   </div>
 
-  <div class="hero-stats">
-    <div class="h-stat"><span class="num">2027</span><span class="lbl">Graduate</span></div>
-    <div class="h-stat"><span class="num">3+</span><span class="lbl">Projects Built</span></div>
-    <div class="h-stat"><span class="num">∞</span><span class="lbl">Hunger to Learn</span></div>
-  </div>
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo"><span class="bk">[</span>PORTFOLIO<span class="acc">.</span>HARSH<span
+        class="bk">]</span></a>
+    <ul class="nav-links">
+      <li><a href="#about"><span class="n">01</span>About</a></li>
+      <li><a href="#skills"><span class="n">02</span>Skills</a></li>
+      <li><a href="#projects"><span class="n">03</span>Projects</a></li>
+      <li><a href="#exp"><span class="n">04</span>Education</a></li>
+      <li><a href="#contact"><span class="n">05</span>Contact</a></li>
+    </ul>
+    <div class="nav-glow"></div>
+  </nav>
 
-  <div class="scroll-cue">
-    <div class="tick"></div>
-    <span>Scroll</span>
-  </div>
-</section>
+  <!-- HERO -->
+  <section id="hero" class="hero-bento">
+    <div class="hero-v-text">PRODUCT DESIGNER &amp; WEB DEV</div>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="inner">
-    <div class="abt-img-wrap reveal">
-      <div class="abt-img-frame">
-        <img src="ChatGPT Image Mar 12, 2026, 03_25_13 PM.png" alt="Harsh">
-      </div>
-      <div class="corner tl"></div><div class="corner tr"></div>
-      <div class="corner bl"></div><div class="corner br"></div>
-      <div class="abt-badge">
-        <span class="big">2027</span>
-        <span class="sm">Batch of<br>LPU</span>
-      </div>
-    </div>
-    <div class="abt-text reveal">
-      <p class="sec-label">About Me</p>
-      <div class="sec-head">
-        <h2>A <em>curious mind</em><br>ready to build</h2>
-      </div>
-      <p>Hey! I'm Harsh — a fresher B.Tech graduate from Lovely Proffesional University. I'm passionate about web development, UI design, problem solving and love turning ideas into real, working things.</p>
-      <p>During college I focused on web development, built several personal and academic projects, and picked up skills across web development, backend and data structures. I'm a fast learner who thrives on challenges and ships clean work.</p>
-      <p>Currently looking for my first full-time opportunity where I can contribute, grow, and make a real impact from day one.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section section-alt">
- 
-  <!-- SVG background -->
-  <svg id="skills-bg-svg" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-    <!-- fine grid -->
-    <g stroke="#c9a84c" stroke-width=".3" opacity=".7">
-      <line x1="0" y1="0" x2="0" y2="700" /><line x1="150" y1="0" x2="150" y2="700"/>
-      <line x1="300" y1="0" x2="300" y2="700"/><line x1="450" y1="0" x2="450" y2="700"/>
-      <line x1="600" y1="0" x2="600" y2="700"/><line x1="750" y1="0" x2="750" y2="700"/>
-      <line x1="900" y1="0" x2="900" y2="700"/><line x1="1050" y1="0" x2="1050" y2="700"/>
-      <line x1="1200" y1="0" x2="1200" y2="700"/>
-      <line x1="0" y1="0" x2="1200" y2="0"/><line x1="0" y1="100" x2="1200" y2="100"/>
-      <line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="300" x2="1200" y2="300"/>
-      <line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="500" x2="1200" y2="500"/>
-      <line x1="0" y1="600" x2="1200" y2="600"/><line x1="0" y1="700" x2="1200" y2="700"/>
-    </g>
-    <!-- diagonal slashes -->
-    <g stroke="#00e5ff" stroke-width=".4" opacity=".4">
-      <line x1="0" y1="700" x2="350" y2="0"/><line x1="200" y1="700" x2="550" y2="0"/>
-      <line x1="500" y1="700" x2="850" y2="0"/><line x1="800" y1="700" x2="1150" y2="0"/>
-      <line x1="950" y1="700" x2="1200" y2="180"/>
-    </g>
-    <!-- decorative hexagons -->
-    <g fill="none" stroke="#c9a84c" stroke-width=".6" opacity=".4">
-      <polygon points="60,40 80,30 100,40 100,60 80,70 60,60"/>
-      <polygon points="1100,600 1120,590 1140,600 1140,620 1120,630 1100,620"/>
-      <polygon points="550,320 570,310 590,320 590,340 570,350 550,340"/>
-    </g>
-    <!-- corner brackets -->
-    <g stroke="#c9a84c" stroke-width="1" fill="none" opacity=".6">
-      <polyline points="20,20 20,55 55,55"/>
-      <polyline points="1180,20 1180,55 1145,55"/>
-      <polyline points="20,680 20,645 55,645"/>
-      <polyline points="1180,680 1180,645 1145,645"/>
-    </g>
-    <!-- floating diamonds -->
-    <polygon points="50,350 58,360 50,370 42,360" fill="rgba(201,168,76,.25)" stroke="#c9a84c" stroke-width=".8"/>
-    <polygon points="1150,200 1158,210 1150,220 1142,210" fill="rgba(0,229,255,.2)" stroke="#00e5ff" stroke-width=".8"/>
-    <polygon points="600,650 608,660 600,670 592,660" fill="rgba(201,168,76,.15)" stroke="#c9a84c" stroke-width=".8"/>
-  </svg>
- 
-  <!-- floating orbs -->
-  <div class="sk-orb sk-orb-1"></div>
-  <div class="sk-orb sk-orb-2"></div>
-  <div class="sk-orb sk-orb-3"></div>
- 
-  <!-- HEADER -->
-  <div class="sk-header reveal">
-    <p class="sec-label">Expertise</p>
-    <div class="sk-title">
-      What I <em>do best</em>
-    </div>
-    <p class="sk-subtitle">
-      8 core competencies built through rigorous coursework, personal projects, and 300+ solved problems across competitive platforms.
-    </p>
-    <div class="sk-stats">
-      <div class="sk-stat">
-        <span class="sk-stat-num">300+</span>
-        <span class="sk-stat-txt">DSA Problems<br>Solved</span>
-      </div>
-      <div class="sk-stat">
-        <span class="sk-stat-num">8</span>
-        <span class="sk-stat-txt">Core Skill<br>Areas</span>
-      </div>
-      <div class="sk-stat">
-        <span class="sk-stat-num">3+</span>
-        <span class="sk-stat-txt">Full-Stack<br>Projects</span>
-      </div>
-      <div class="sk-stat">
-        <span class="sk-stat-num">2</span>
-        <span class="sk-stat-txt">Competitive<br>Platforms</span>
-      </div>
-    </div>
-  </div>
- 
-  <!-- FILTER TABS -->
-  <div class="sk-tabs reveal">
-    <button class="sk-tab active" data-filter="all">All Skills</button>
-    <button class="sk-tab" data-filter="languages">Languages</button>
-    <button class="sk-tab" data-filter="web">Web & Stack</button>
-    <button class="sk-tab" data-filter="cs">CS Fundamentals</button>
-    <button class="sk-tab" data-filter="tools">Tools & Infra</button>
-  </div>
- 
-  <!-- GRID -->
-  <div class="sk-grid reveal">
- 
-    <!-- 01 C++ / Java -->
-    <div class="sk-card" data-cat="languages">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">01</div>
-      <span class="sk-num">#01</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji">y</span>
-        <!-- C++ SVG -->
-        <svg class="sk-svg-icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#00599C" d="M117.5 33.5l.3-.2c-.6-1-1.2-2-1.9-3L116 30l-.3-.2C105.1 12 85.3 0 62.7 0S20.3 11.7 9.7 29.8L9.6 30l-.3.2c-.7 1-1.3 2-1.9 3l.3.2L4.8 37l.2.2C4.4 38.4 3.8 39.6 3.3 40.8L3 41l-.2.1C-.4 49.1-1.9 57.4-1.9 64s1.5 14.9 4.7 22.9l.2.1.3.6c.5 1.2 1.1 2.4 1.7 3.6l-.2.2 2.9 3.6-.3.2c.6 1 1.2 2 1.9 3l.3.2.3.2c10.6 18 30.4 30 53 30s42.4-12 53-30l.3-.2.3-.2c.7-1 1.3-2 1.9-3l-.3-.2 2.9-3.6-.2-.2c.6-1.2 1.2-2.4 1.7-3.6l.3-.6.2-.1c3.2-8 4.7-16.3 4.7-22.9s-1.5-14.9-4.7-22.9l-.2-.1-.3-.6c-.5-1.2-1.1-2.4-1.7-3.6l.2-.2z"/>
-          <path fill="#fff" d="M64 18c25.4 0 46 20.6 46 46S89.4 110 64 110 18 89.4 18 64s20.6-46 46-46zm-9.8 60.3c2.3 1.4 4.8 2.1 7.6 2.1 4 0 7.2-1.1 9.7-3.3 2.4-2.2 3.9-5.3 4.4-9.2h-6.4c-.4 2.1-1.2 3.7-2.4 4.8-1.2 1.1-2.9 1.7-5 1.7-2.7 0-4.9-1.1-6.5-3.2-1.6-2.1-2.4-5.1-2.4-9s.8-7 2.4-9.2c1.6-2.2 3.8-3.3 6.5-3.3 2.1 0 3.8.6 5 1.7 1.2 1.1 2 2.6 2.4 4.5h6.4c-.5-3.7-2-6.6-4.4-8.7-2.5-2.1-5.7-3.1-9.7-3.1-2.8 0-5.3.7-7.6 2.1-2.3 1.4-4 3.4-5.3 6s-1.9 5.7-1.9 9.3.6 6.7 1.9 9.3 3 4.6 5.3 6z"/>
-        </svg>
-        <!-- Java SVG -->
-        <svg class="sk-svg-icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969z"/>
-          <path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"/>
-          <path fill="#0074BD" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468z"/>
-          <path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/>
-          <path fill="#0074BD" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"/>
-        </svg>
-        <span class="sk-level adv">Advanced</span>
-      </div>
-      <h3>C++ &amp; Java</h3>
-      <p>Proficient in both languages with strong OOP, collections, multithreading, and design patterns. Core languages for competitive programming and system-level thinking.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">OOP</span><span class="sk-tag">STL</span>
-        <span class="sk-tag">Multithreading</span><span class="sk-tag">Design Patterns</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">92%</span><div class="bar" data-width="92"></div></div>
-    </div>
- 
-    <!-- 02 DSA -->
-    <div class="sk-card" data-cat="cs">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">02</div>
-      <span class="sk-num">#02</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji"></span>
-        <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/>
-          <path d="M2 17l10 5 10-5" stroke="#00e5ff" stroke-width="1.5" stroke-linejoin="round"/>
-          <path d="M2 12l10 5 10-5" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round" opacity=".6"/>
-        </svg>
-        <span class="sk-level adv">Advanced</span>
-      </div>
-      <h3>Data Structures &amp; Algorithms</h3>
-      <p>Strong foundation in arrays, trees, graphs, dynamic programming, and recursion. 300+ problems solved on LeetCode and HackerRank with optimized time complexity.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">Trees / Graphs</span><span class="sk-tag">DP</span>
-        <span class="sk-tag">LeetCode 300+</span><span class="sk-tag">HackerRank</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">88%</span><div class="bar" data-width="88"></div></div>
-    </div>
- 
-    <!-- 03 MERN -->
-    <div class="sk-card" data-cat="web">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">03</div>
-      <span class="sk-num">#03</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji"></span>
-        <!-- React icon -->
-        <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="2.5" fill="#61DAFB"/>
-          <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"/>
-          <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(60 12 12)"/>
-          <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(120 12 12)"/>
-        </svg>
-        <!-- Node icon -->
-        <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L3 7v10l9 5 9-5V7L12 2z" stroke="#83CD29" stroke-width="1.3" stroke-linejoin="round"/>
-          <path d="M8 10.5V14l4 2 4-2v-3.5L12 13l-4-2.5z" fill="#83CD29" opacity=".4"/>
-        </svg>
-        <span class="sk-level int">Intermediate</span>
-      </div>
-      <h3>MERN Stack</h3>
-      <p>Full-stack development with MongoDB, Express.js, React.js, and Node.js. Built dynamic, responsive applications with REST APIs and modern component architecture.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">React.js</span><span class="sk-tag">Node.js</span>
-        <span class="sk-tag">MongoDB</span><span class="sk-tag">REST APIs</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">80%</span><div class="bar" data-width="80"></div></div>
-    </div>
- 
-    <!-- 04 DevOps -->
-    <div class="sk-card" data-cat="tools">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">04</div>
-      <span class="sk-num">#04</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji"></span>
-        <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="7" width="3" height="3" rx=".4" fill="#019BC6"/>
-          <rect x="6" y="7" width="3" height="3" rx=".4" fill="#019BC6"/>
-          <rect x="10" y="7" width="3" height="3" rx=".4" fill="#019BC6"/>
-          <rect x="6" y="3" width="3" height="3" rx=".4" fill="#019BC6"/>
-          <rect x="10" y="3" width="3" height="3" rx=".4" fill="#019BC6"/>
-          <rect x="10" y="11" width="3" height="3" rx=".4" fill="#019BC6" opacity=".6"/>
-          <path d="M2 12c0 3 2 5 6 5h9c3 0 5-2 4-5" stroke="#019BC6" stroke-width="1.2"/>
-          <path d="M20 10c1-1 3-1 3 1" stroke="#019BC6" stroke-width="1.2"/>
-        </svg>
-        <span class="sk-level int">Intermediate</span>
-      </div>
-      <h3>DevOps &amp; Docker</h3>
-      <p>Containerization with Docker for consistent development and deployment environments. Created and managed containers and images for scalable application deployments.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">Docker</span><span class="sk-tag">Containers</span>
-        <span class="sk-tag">CI/CD Basics</span><span class="sk-tag">Linux</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">76%</span><div class="bar" data-width="76"></div></div>
-    </div>
- 
-    <!-- 05 SQL -->
-    <div class="sk-card" data-cat="tools">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">05</div>
-      <span class="sk-num">#05</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji"></span>
-        <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="12" cy="5" rx="8" ry="3" stroke="#c9a84c" stroke-width="1.4"/>
-          <path d="M4 5v5c0 1.66 3.58 3 8 3s8-1.34 8-3V5" stroke="#c9a84c" stroke-width="1.4"/>
-          <path d="M4 10v5c0 1.66 3.58 3 8 3s8-1.34 8-3v-5" stroke="#c9a84c" stroke-width="1.4"/>
-          <path d="M4 15v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4" stroke="#00e5ff" stroke-width="1.4" opacity=".7"/>
-        </svg>
-        <span class="sk-level adv">Advanced</span>
-      </div>
-      <h3>SQL / Databases</h3>
-      <p>Strong command over relational databases, complex queries, joins, indexing, and normalization. Designed and managed structured data efficiently using MySQL and MongoDB.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">MySQL</span><span class="sk-tag">Joins & Indexing</span>
-        <span class="sk-tag">Normalization</span><span class="sk-tag">MongoDB</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">85%</span><div class="bar" data-width="85"></div></div>
-    </div>
- 
-    <!-- 06 Networks -->
-    <div class="sk-card" data-cat="cs">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">06</div>
-      <span class="sk-num">#06</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji"></span>
-        <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" stroke="#c9a84c" stroke-width="1.3"/>
-          <line x1="2" y1="12" x2="22" y2="12" stroke="#c9a84c" stroke-width="1.3"/>
-          <path d="M12 2C9.33 6 8 9 8 12s1.33 6 4 10" stroke="#00e5ff" stroke-width="1.3"/>
-          <path d="M12 2c2.67 4 4 7 4 10s-1.33 6-4 10" stroke="#00e5ff" stroke-width="1.3"/>
-          <line x1="2" y1="8" x2="22" y2="8" stroke="#c9a84c" stroke-width=".7" opacity=".5"/>
-          <line x1="2" y1="16" x2="22" y2="16" stroke="#c9a84c" stroke-width=".7" opacity=".5"/>
-        </svg>
-        <span class="sk-level int">Intermediate</span>
-      </div>
-      <h3>Computer Networks</h3>
-      <p>Solid understanding of HTTP, TCP/IP, DNS, and client-server architecture. Applied networking knowledge in API development and web communication protocols.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">HTTP/HTTPS</span><span class="sk-tag">TCP/IP</span>
-        <span class="sk-tag">DNS</span><span class="sk-tag">REST</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">70%</span><div class="bar" data-width="70"></div></div>
-    </div>
- 
-    <!-- 07 Python -->
-    <div class="sk-card" data-cat="languages">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">07</div>
-      <span class="sk-num">#07</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji"></span>
-        <svg class="sk-svg-icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-          <linearGradient id="py1" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 .568 -29.215 -655.234)">
-            <stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/>
-          </linearGradient>
-          <linearGradient id="py2" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.563 0 0 .568 -29.215 -655.234)">
-            <stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/>
-          </linearGradient>
-          <path fill="url(#py1)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zm-13.354 7.569c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/>
-          <path fill="url(#py2)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.548v23.515c0 6.693 5.818 10.614 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268z"/>
-        </svg>
-        <span class="sk-level int">Intermediate</span>
-      </div>
-      <h3>Python</h3>
-      <p>Proficient in Python for scripting, automation, backend development, and data handling. Used in academic projects for logic-intensive and data science tasks.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">Scripting</span><span class="sk-tag">Automation</span>
-        <span class="sk-tag">Data Science</span><span class="sk-tag">Flask Basics</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">75%</span><div class="bar" data-width="75"></div></div>
-    </div>
- 
-    <!-- 08 OS -->
-    <div class="sk-card" data-cat="cs">
-      <div class="sk-glass-inner"></div>
-      <div class="bg-n">08</div>
-      <span class="sk-num">#08</span>
-      <div class="sk-icon-wrap">
-        <span class="sk-emoji"></span>
-        <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="3" width="20" height="14" rx="2" stroke="#c9a84c" stroke-width="1.4"/>
-          <path d="M8 21h8M12 17v4" stroke="#c9a84c" stroke-width="1.4"/>
-          <circle cx="7" cy="10" r="1.5" fill="#00e5ff" opacity=".7"/>
-          <circle cx="12" cy="10" r="1.5" fill="#c9a84c" opacity=".7"/>
-          <circle cx="17" cy="10" r="1.5" fill="#00e5ff" opacity=".5"/>
-          <line x1="2" y1="7" x2="22" y2="7" stroke="#c9a84c" stroke-width=".8" opacity=".5"/>
-        </svg>
-        <span class="sk-level int">Intermediate</span>
-      </div>
-      <h3>Operating Systems</h3>
-      <p>Core OS concepts including processes, threads, scheduling, memory management, deadlocks, and file systems. Applied in system-level analysis and design.</p>
-      <div class="sk-tags">
-        <span class="sk-tag">Processes</span><span class="sk-tag">Memory Mgmt</span>
-        <span class="sk-tag">Scheduling</span><span class="sk-tag">Linux</span>
-      </div>
-      <div class="bar-wrap"><span class="bar-pct">70%</span><div class="bar" data-width="70"></div></div>
-    </div>
- 
-  </div><!-- /sk-grid -->
- 
-</section>
-
-<!-- PROJECTS - Enhanced -->
-<section id="projects" class="section">
-  <div style="max-width:1200px;margin:0 auto 4rem;" class="reveal">
-    <p class="sec-label">Academic &amp; Personal Work</p>
-    <div class="sec-head"><h2>My <em>projects</em></h2></div>
-  </div>
-
-  <div class="pj-grid">
-
-    <!-- Project 1 -->
-    <div class="pj reveal">
-      <div class="pj-thumb" data-no="01">
-        <div class="pj-ov">
-          <svg class="pj-ov-ico" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 4L4 10V20H20V10L14 4H10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M10 20V14H14V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </div>
-      <div class="pj-body">
-        <div class="pj-meta">
-          <span class="tag">College Project</span>
-          <span class="pj-yr">2024</span>
-        </div>
-        <h3>LearnPath</h3>
-        <p>Dynamic learning path recommendation system that suggests self-curated, self-paced courses tailored to individual learning styles and goals for enhanced understanding and retention.</p>
-        <a href="https://github.com/kundan9199/LearnPath-Dynamic-Learning-Path-Recommendation-System.git" class="pj-link" target="_blank">
-          View on GitHub <span class="arrow">→</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="pj reveal">
-      <div class="pj-thumb" data-no="02">
-        <div class="pj-ov">
-          <svg class="pj-ov-ico" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </div>
-      <div class="pj-body">
-        <div class="pj-meta">
-          <span class="tag">Personal Project</span>
-          <span class="pj-yr">2024</span>
-        </div>
-        <h3>Majik</h3>
-        <p>AI-powered conversational e-commerce platform where customers place orders through an intelligent chatbot for a seamless and natural shopping experience.</p>
-        <a href="#" class="pj-link" target="_blank">
-          Live Demo <span class="arrow">→</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="pj reveal">
-      <div class="pj-thumb" data-no="03">
-        <div class="pj-ov">
-          <svg class="pj-ov-ico" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </div>
-      <div class="pj-body">
-        <div class="pj-meta">
-          <span class="tag">Personal Project</span>
-          <span class="pj-yr">2024</span>
-        </div>
-        <h3>Majik</h3>
-        <p>AI-powered conversational e-commerce platform where customers place orders through an intelligent chatbot for a seamless and natural shopping experience.</p>
-        <a href="#" class="pj-link" target="_blank">
-          Live Demo <span class="arrow">→</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Add more projects here following the same structure if needed -->
-
-  </div>
-</section>
-
-<!-- EDUCATION - Enhanced -->
-<section id="exp" class="section section-alt">
-  <div class="inner">
-    <div class="reveal">
-      <p class="sec-label">Background</p>
-      <div class="sec-head"><h2>Education &amp; <em>training</em></h2></div>
-    </div>
-
-    <div class="tl">
-      <div class="tl-it reveal">
-        <p class="tl-period">2023 — 2027</p>
-        <h3>B.Tech Computer Science &amp; Engineering</h3>
-        <h4>Lovely Professional University &middot; Phagwara</h4>
-        <p>CGPA: 8.0 / 10. Key coursework: Full Stack Web Development, Data Structures &amp; Algorithms, Data Science, Computer Networks. Actively participated in hackathons and coding clubs.</p>
+    <div class="hero-left">
+      <div class="hero-badges">
+        <div class="pill-badge"><span class="dot gold"></span>2027 Graduate</div>
+        <div class="pill-badge"><span class="dot cyan"></span>3+ Projects Built</div>
+        <div class="pill-badge"><span class="dot green"></span>Open to Work</div>
       </div>
 
-      <div class="tl-it reveal">
-        <p class="tl-period">2020 — 2022</p>
-        <h3>Senior Secondary (Class XII)</h3>
-        <h4>United Public School &middot; ICSE</h4>
-        <p>Scored 90% in Science stream. Subjects: Mathematics, Physics, Chemistry, English.</p>
-      </div>
-
-      <div class="tl-it reveal">
-        <p class="tl-period">June 2025 — July 2025</p>
-        <h3>Training in Data Structures &amp; Algorithms</h3>
-        <h4>CipherSchools</h4>
-        <p>Intensive hands-on training focused on advanced DSA concepts, problem-solving techniques, and competitive programming strategies.</p>
-      </div>
-
-      <div class="tl-it reveal">
-        <p class="tl-period">Ongoing</p>
-        <h3>Cloud Computing &amp; Certifications</h3>
-        <h4>NPTEL &amp; Other Platforms</h4>
-        <p>Completed courses in Cloud Computing. Actively pursuing certifications from AWS, Google, and Microsoft to strengthen cloud and DevOps skills.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS & TOOLS -->
-<section id="test" class="section">
-  <div style="max-width:1100px;margin:0 auto 3.5rem;" class="reveal">
-    <p class="sec-label">Credentials</p>
-    <div class="sec-head"><h2>Certs &amp; <em>tools</em></h2></div>
-  </div>
-
-  <div style="max-width:1100px;margin:0 auto;">
-
-    <!-- 4 CERT CARDS — 2×2 GRID -->
-    <div class="cert-grid reveal">
-
-      <div class="cert-card">
-        <div class="cert-top">
-          <div class="cert-icon-box" style="background:rgba(0,229,255,.08);color:var(--cyan);">C</div>
-          <div>
-            <h4>Interpersonal Communication for Engineering Leaders</h4>
-            <p>Coursera · Rice University</p>
-          </div>
-        </div>
-        <p class="cert-desc">Covers leadership, personal branding, influencing techniques, and professional communication strategies for engineers stepping into leadership roles.</p>
-        <div class="cert-foot">
-          <span class="cert-date">March 2026</span>
-          <a href="https://coursera.org/share/f20c19ab363604e4df242ba32dcdce42" target="_blank" class="cert-link">View &#8599;</a>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-top">
-          <div class="cert-icon-box" style="background:rgba(57,255,96,.08);color:var(--green);">G</div>
-          <div>
-            <h4>Data Science using Python</h4>
-            <p>Google</p>
-          </div>
-        </div>
-        <p class="cert-desc">Covers Python for data science workflows, responsive web design fundamentals, and AI integration techniques in real-world applications.</p>
-        <div class="cert-foot">
-          <span class="cert-date">October 2025</span>
-          <span class="cert-badge">Google</span>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-top">
-          <div class="cert-icon-box" style="background:rgba(201,168,76,.08);color:var(--gold);">A</div>
-          <div>
-            <h4>Docker Masters</h4>
-            <p>Coursera · Docker</p>
-          </div>
-        </div>
-        <p class="cert-desc">Brief description of what this certification covers and the skills it validates. Replace with your actual details.</p>
-        <div class="cert-foot">
-          <span class="cert-date">Month Year</span>
-          <a href="#" target="_blank" class="cert-link">View &#8599;</a>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-top">
-          <div class="cert-icon-box" style="background:rgba(201,168,76,.08);color:var(--gold);">M</div>
-          <div>
-            <h4>Database management</h4>
-            <p>Oracle · Incox</p>
-          </div>
-        </div>
-        <p class="cert-desc">Brief description of what this certification covers and the skills it validates. Replace with your actual details.</p>
-        <div class="cert-foot">
-          <span class="cert-date">Month Year</span>
-          <a href="#" target="_blank" class="cert-link">View &#8599;</a>
-        </div>
-      </div>
-
-    </div><!-- /cert-grid -->
-
-    <!-- SKILLS ZONE -->
-    <div class="skills-zone reveal">
-      <p class="skills-zone-title">// Tools &amp; Technologies</p>
-      <div class="skills-logo-grid">
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/><span>C++</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/><span>Java</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><span>Python</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js"/><span>React.js</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/><span>Node.js</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" style="filter:invert(0.5)"/><span>Express.js</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/><span>MongoDB</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/><span>Docker</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/><span>VS Code</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"/><span>Linux</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"/><span>Postman</span></div>
-        <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"/><span>Firebase</span></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════ CONTACT ═══════════ -->
-<section id="contact" class="ct">
- 
-  <!-- ANIMATED CANVAS -->
-  <canvas id="ct-canvas"></canvas>
-  <div class="ct-glow"></div>
- 
-  <div class="ct-wrap">
-
-    <!-- MEGA HEADLINE -->
-    <div class="ct-hero">
-      <div class="ct-hero-bg-text">CONTACT</div>
-      <h1 class="ct-h1">
-        <span class="l1">LET'S</span>
-        <span class="l2">BUILD</span>
-        <span class="l3">TOGETHER</span>
+      <h1 class="hero-h1">
+        Hello - It's <br>
+        <span class="hero-name-hl">Harsh</span><br>
+        a web developer.
       </h1>
-      <p class="ct-sub">
-        Fresh out of college and ready to contribute from day one.
-        If you're looking for a driven fresher who ships clean, thoughtful work —
-        I'd love to be part of your team. Don't hesitate to reach out.
-      </p>
-    </div>
- 
-    <!-- MAIN GRID -->
-    <div class="ct-grid">
- 
-      <!-- ── LEFT: info + form ── -->
-      <div>
- 
-        <!-- contact info cards -->
-        <div class="ct-info-row">
-          <div class="ct-info-card">
-            <div class="ic-label">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-              Email
-            </div>
-            <a href="mailto:harshshuklaji580@gmail.com" class="ic-val" style="font-size:.78rem;">harshshuklaji580@gmail.com</a>
-          </div>
-          <div class="ct-info-card">
-            <div class="ic-label">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Location
-            </div>
-            <div class="ic-val">Lucknow, Uttar Pradesh</div>
-          </div>
-          <div class="ct-info-card">
-            <div class="ic-label">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-              Phone
-            </div>
-            <div class="ic-val">+91 88585 54901</div>
-          </div>
-          <div class="ct-info-card">
-            <div class="ic-label">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              Availability
-            </div>
-            <div class="ic-val" style="color:var(--green);">Immediate Joiner</div>
-          </div>
-        </div>
- 
-        <!-- response time -->
-        <div class="ct-resp">
-          <div class="ct-resp-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2">
-              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-            </svg>
-          </div>
-          <div class="ct-resp-body">
-            <h4>Usually responds within 24 hours</h4>
-            <p>Best reached via email or LinkedIn · Mon – Sat, 10AM – 8PM IST</p>
-            <div class="ct-resp-meter">
-              <div class="ct-resp-fill"></div>
-            </div>
-          </div>
-        </div>
- 
-        <!-- big email button -->
-        <a href="mailto:harshshuklaji580@gmail.com" class="ct-email-big">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/>
-          </svg>
-          Send Me An Email
-        </a>
- 
-        <!-- contact form -->
-        <div class="ct-form">
-          <div class="ct-form-title">quick_message.send()</div>
-          <div class="form-row">
-            <div class="form-field">
-              <label>Name <span class="req">*</span></label>
-              <input type="text" placeholder="Your full name"/>
-            </div>
-            <div class="form-field">
-              <label>Email <span class="req">*</span></label>
-              <input type="email" placeholder="your@email.com"/>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label>Subject</label>
-              <select>
-                <option value="" disabled selected>Select a topic</option>
-                <option>Job Opportunity</option>
-                <option>Internship Offer</option>
-                <option>Freelance Project</option>
-                <option>Collaboration</option>
-                <option>General Enquiry</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label>Company / College</label>
-              <input type="text" placeholder="Optional"/>
-            </div>
-          </div>
-          <div class="form-field">
-            <label>Message <span class="req">*</span></label>
-            <textarea placeholder="Hi Harsh, I'd like to discuss..."></textarea>
-          </div>
-          <div class="form-submit">
-            <button class="btn-send" type="button" onclick="handleSend(this)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-              Transmit Message
-            </button>
-            <span class="form-note">// No spam. Ever.</span>
-          </div>
-        </div>
- 
-      </div>
- 
-      <!-- ── RIGHT: socials + cv + open to work ── -->
-      <div>
- 
-        <p class="ct-soc-title">Find me across the web</p>
- 
-        <div class="ct-soc-grid">
- 
-          <!-- LinkedIn -->
-          <a class="soc" href="https://www.linkedin.com/in/harsh-shukla-dev/" target="_blank">
-            <div class="soc-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="#0A66C2">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </div>
-            <span class="soc-name">LinkedIn</span>
-            <span class="soc-handle">harsh-shukla-dev</span>
-            <span class="soc-ext">↗ Connect</span>
-          </a>
- 
-          <!-- GitHub -->
-          <a class="soc" href="https://github.com/HarshS171" target="_blank">
-            <div class="soc-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="var(--cream)">
-                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-              </svg>
-            </div>
-            <span class="soc-name">GitHub</span>
-            <span class="soc-handle">HarshS171</span>
-            <span class="soc-ext">↗ Follow</span>
-          </a>
- 
-          <!-- HackerRank -->
-          <a class="soc" href="https://www.hackerrank.com/profile/harsh_s71" target="_blank">
-            <div class="soc-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="#00EA64">
-                <path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 11.885 0 13S13.285 24 12 24 2.253 19.115 1.608 18c-.645-1.115-.645-11.885 0-13C2.253 3.886 10.715 0 12 0zm2.205 6.015h-1.02c-.135 0-.181.045-.181.18v4.24c-.254-.416-.494-.802-.734-1.188l-1.01-1.631-.91-1.472-.428-.694a.217.217 0 00-.195-.12H8.698c-.135 0-.18.046-.18.181v11.97c0 .136.045.181.18.181h1.065c.135 0 .18-.045.18-.18V9.55c.271.44.511.845.766 1.25l.99 1.607.944 1.533.93 1.503.389.631c.046.075.105.12.196.12h1.052c.135 0 .196-.045.196-.18V6.195c.015-.135-.045-.18-.196-.18z"/>
-              </svg>
-            </div>
-            <span class="soc-name">HackerRank</span>
-            <span class="soc-handle">harsh_s71</span>
-            <span class="soc-ext">↗ Profile</span>
-          </a>
- 
-          <!-- Instagram -->
-          <a class="soc" href="https://www.instagram.com/harsh_sr71/" target="_blank">
-            <div class="soc-icon-wrap">
-              <svg viewBox="0 0 24 24">
-                <defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#dc2743"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
-                <path fill="url(#ig)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-              </svg>
-            </div>
-            <span class="soc-name">Instagram</span>
-            <span class="soc-handle">harsh_sr71</span>
-            <span class="soc-ext">↗ Follow</span>
-          </a>
- 
-          <!-- LeetCode -->
-          <a class="soc" href="https://leetcode.com/" target="_blank">
-            <div class="soc-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="#FFA116">
-                <path d="M13.483 0a1.374 1.374 0 00-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 00-1.209 2.104 5.35 5.35 0 00-.125.513 5.527 5.527 0 00.062 2.362 5.83 5.83 0 00.349 1.017 5.938 5.938 0 00 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 00-1.951-.003l-2.396 2.392a3.021 3.021 0 01-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 01.066-.523 2.545 2.545 0 01.619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 00-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0013.483 0zm-2.866 12.815a1.38 1.38 0 00-1.38 1.382 1.38 1.38 0 001.38 1.382H20.79a1.38 1.38 0 001.38-1.382 1.38 1.38 0 00-1.38-1.382z"/>
-              </svg>
-            </div>
-            <span class="soc-name">LeetCode</span>
-            <span class="soc-handle">yourhandle</span>
-            <span class="soc-ext">↗ Profile</span>
-          </a>
- 
-          <!-- Twitter / X -->
-          <a class="soc" href="https://twitter.com/" target="_blank">
-            <div class="soc-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="var(--cream)">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </div>
-            <span class="soc-name">Twitter / X</span>
-            <span class="soc-handle">@yourhandle</span>
-            <span class="soc-ext">↗ Follow</span>
-          </a>
- 
-        </div>
- 
-        <!-- CV download -->
-        <a class="ct-cv" href="HarshCV.pdf" download>
-          <div class="cv-l">
-            <div class="cv-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2">
-                <path d="M12 15V3m0 12l-4-4m4 4l4-4"/>
-                <path d="M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
-              </svg>
-            </div>
-            <div>
-              <span class="cv-label">Download Resume</span>
-              <span class="cv-sub">HarshCV.pdf &nbsp;·&nbsp; PDF Format</span>
-            </div>
-          </div>
-          <span class="cv-badge">&#8595; GET CV</span>
-        </a>
- 
-        <!-- open to work card -->
-        <div class="ct-otw">
-          <div class="otw-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2">
-              <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
-              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
-            </svg>
-          </div>
-          <div class="otw-body">
-            <h4>Open to Work — Immediate Joiner</h4>
-            <p>Looking for full-time roles in Software Development,<br>Web Dev, or Data Science. Relocatable across India.</p>
-          </div>
-        </div>
- 
-      </div>
- 
-    </div><!-- /ct-grid -->
- 
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2024 HARSH SHUKLA. All rights reserved.</p>
-  <div class="ft-links">
-    <a href="#hero">&#8593; Top</a>
-    <a href="harshshuklaji580@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/harsh-shukla-dev/" target="_blank">LinkedIn</a>
-  </div>
-</footer>
-<script src="portfolio.js"></script>
+      <p class="hero-p">
+        Aspiring BTech Graduate — passionate about building sharp, meaningful digital experiences and ready to turn
+        skills into real-world impact.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn-pill btn-pill-primary">
+          Hire Me
+          <svg viewBox="0 0 24 24" fill="none" class="btn-arr" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </a>
+        <a href="#projects" class="btn-pill btn-pill-outline">
+          View Projects
+          <svg viewBox="0 0 24 24" fill="none" class="btn-arr" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right tilt-3d">
+      <div class="hero-img-box">
+        <img src="ChatGPT Image Mar 12, 2026, 03_25_13 PM.png" alt="Harsh" class="hero-img">
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      Scroll down ↓
+    </div>
+  </section>
+
+  <!-- ABOUT & EXPERIENCE -->
+  <section id="about" class="section about-bento">
+
+    <!-- Personal Intro Card -->
+    <div class="abt-intro-card reveal">
+      <div class="abt-intro-left">
+        <div class="abt-intro-head">
+          <span class="greeting">Hello There 👋 It's</span>
+          <h2 class="name-huge">HARSH SHUKLA</h2>
+        </div>
+      </div>
+      <div class="abt-intro-right">
+        <p class="abt-desc">
+          Hey! I'm a passionate fresher B.Tech graduate from Lovely Professional University. I focus on web development,
+          UI design, and problem solving. I love turning ideas into real, working things and thrive on challenges that
+          push me to ship clean, impactful work.
+        </p>
+        <a href="#contact" class="btn-pill btn-pill-primary abt-btn">
+          Let's talk
+          <svg viewBox="0 0 24 24" fill="none" class="btn-arr" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Journey Table -->
+    <div id="exp" class="abt-journey reveal">
+      <div class="journey-header">
+        <div class="jh-left">
+          <p class="sec-label">Background</p>
+          <h2>Explore My <br><em>Journey</em></h2>
+        </div>
+        <div class="jh-right">
+          <p class="jh-p">A look at my academic timeline, core training, and ongoing certifications that shape my
+            foundation.</p>
+          <a href="#contact" class="btn-pill btn-pill-outline">Book A Call ↗</a>
+        </div>
+      </div>
+
+      <div class="journey-table">
+        <!-- Item 1 -->
+        <div class="jt-row tilt-3d">
+          <div class="jt-col jt-org">Lovely Professional University</div>
+          <div class="jt-col jt-loc">Phagwara</div>
+          <div class="jt-col jt-role">B.Tech CSE (8.0 CGPA)</div>
+          <div class="jt-col jt-date">2023 — 2027</div>
+          <div class="jt-col jt-tags">
+            <span class="j-tag">Full Stack</span>
+            <span class="j-tag">DSA</span>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="jt-row tilt-3d">
+          <div class="jt-col jt-org">CipherSchools</div>
+          <div class="jt-col jt-loc">Remote</div>
+          <div class="jt-col jt-role">DSA Training</div>
+          <div class="jt-col jt-date">Jun — Jul 2025</div>
+          <div class="jt-col jt-tags">
+            <span class="j-tag">Problem Solving</span>
+            <span class="j-tag">Algorithms</span>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="jt-row tilt-3d">
+          <div class="jt-col jt-org">United Public School</div>
+          <div class="jt-col jt-loc">Kanpur</div>
+          <div class="jt-col jt-role">Senior Secondary (90%)</div>
+          <div class="jt-col jt-date">2020 — 2022</div>
+          <div class="jt-col jt-tags">
+            <span class="j-tag">Science</span>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="jt-row tilt-3d">
+          <div class="jt-col jt-org">NPTEL & Google</div>
+          <div class="jt-col jt-loc">Online</div>
+          <div class="jt-col jt-role">Cloud & Certifications</div>
+          <div class="jt-col jt-date">Ongoing</div>
+          <div class="jt-col jt-tags">
+            <span class="j-tag">Cloud</span>
+            <span class="j-tag">DevOps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+
+    <!-- SVG background -->
+    <svg id="skills-bg-svg" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid slice">
+      <!-- fine grid -->
+      <g stroke="#c9a84c" stroke-width=".3" opacity=".7">
+        <line x1="0" y1="0" x2="0" y2="700" />
+        <line x1="150" y1="0" x2="150" y2="700" />
+        <line x1="300" y1="0" x2="300" y2="700" />
+        <line x1="450" y1="0" x2="450" y2="700" />
+        <line x1="600" y1="0" x2="600" y2="700" />
+        <line x1="750" y1="0" x2="750" y2="700" />
+        <line x1="900" y1="0" x2="900" y2="700" />
+        <line x1="1050" y1="0" x2="1050" y2="700" />
+        <line x1="1200" y1="0" x2="1200" y2="700" />
+        <line x1="0" y1="0" x2="1200" y2="0" />
+        <line x1="0" y1="100" x2="1200" y2="100" />
+        <line x1="0" y1="200" x2="1200" y2="200" />
+        <line x1="0" y1="300" x2="1200" y2="300" />
+        <line x1="0" y1="400" x2="1200" y2="400" />
+        <line x1="0" y1="500" x2="1200" y2="500" />
+        <line x1="0" y1="600" x2="1200" y2="600" />
+        <line x1="0" y1="700" x2="1200" y2="700" />
+      </g>
+      <!-- diagonal slashes -->
+      <g stroke="#00e5ff" stroke-width=".4" opacity=".4">
+        <line x1="0" y1="700" x2="350" y2="0" />
+        <line x1="200" y1="700" x2="550" y2="0" />
+        <line x1="500" y1="700" x2="850" y2="0" />
+        <line x1="800" y1="700" x2="1150" y2="0" />
+        <line x1="950" y1="700" x2="1200" y2="180" />
+      </g>
+      <!-- decorative hexagons -->
+      <g fill="none" stroke="#c9a84c" stroke-width=".6" opacity=".4">
+        <polygon points="60,40 80,30 100,40 100,60 80,70 60,60" />
+        <polygon points="1100,600 1120,590 1140,600 1140,620 1120,630 1100,620" />
+        <polygon points="550,320 570,310 590,320 590,340 570,350 550,340" />
+      </g>
+      <!-- corner brackets -->
+      <g stroke="#c9a84c" stroke-width="1" fill="none" opacity=".6">
+        <polyline points="20,20 20,55 55,55" />
+        <polyline points="1180,20 1180,55 1145,55" />
+        <polyline points="20,680 20,645 55,645" />
+        <polyline points="1180,680 1180,645 1145,645" />
+      </g>
+      <!-- floating diamonds -->
+      <polygon points="50,350 58,360 50,370 42,360" fill="rgba(201,168,76,.25)" stroke="#c9a84c" stroke-width=".8" />
+      <polygon points="1150,200 1158,210 1150,220 1142,210" fill="rgba(0,229,255,.2)" stroke="#00e5ff"
+        stroke-width=".8" />
+      <polygon points="600,650 608,660 600,670 592,660" fill="rgba(201,168,76,.15)" stroke="#c9a84c"
+        stroke-width=".8" />
+    </svg>
+
+    <!-- floating orbs -->
+    <div class="sk-orb sk-orb-1"></div>
+    <div class="sk-orb sk-orb-2"></div>
+    <div class="sk-orb sk-orb-3"></div>
+
+    <!-- HEADER -->
+    <div class="sk-header reveal">
+      <p class="sec-label">Expertise</p>
+      <div class="sk-title">
+        What I <em>do best</em>
+      </div>
+      <p class="sk-subtitle">
+        8 core competencies built through rigorous coursework, personal projects, and 300+ solved problems across
+        competitive platforms.
+      </p>
+      <div class="sk-stats">
+        <div class="sk-stat">
+          <span class="sk-stat-num">300+</span>
+          <span class="sk-stat-txt">DSA Problems<br>Solved</span>
+        </div>
+        <div class="sk-stat">
+          <span class="sk-stat-num">8</span>
+          <span class="sk-stat-txt">Core Skill<br>Areas</span>
+        </div>
+        <div class="sk-stat">
+          <span class="sk-stat-num">3+</span>
+          <span class="sk-stat-txt">Full-Stack<br>Projects</span>
+        </div>
+        <div class="sk-stat">
+          <span class="sk-stat-num">2</span>
+          <span class="sk-stat-txt">Competitive<br>Platforms</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="sk-tabs reveal">
+      <button class="sk-tab active" data-filter="all">All Skills</button>
+      <button class="sk-tab" data-filter="languages">Languages</button>
+      <button class="sk-tab" data-filter="web">Web & Stack</button>
+      <button class="sk-tab" data-filter="cs">CS Fundamentals</button>
+      <button class="sk-tab" data-filter="tools">Tools & Infra</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="sk-grid reveal">
+
+      <!-- 01 C++ / Java -->
+      <div class="sk-card" data-cat="languages" style="--skill-color: #EA2D2E;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">01</div>
+        <span class="sk-num">#01</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji">y</span>
+          <!-- C++ SVG -->
+          <svg class="sk-svg-icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#00599C"
+              d="M117.5 33.5l.3-.2c-.6-1-1.2-2-1.9-3L116 30l-.3-.2C105.1 12 85.3 0 62.7 0S20.3 11.7 9.7 29.8L9.6 30l-.3.2c-.7 1-1.3 2-1.9 3l.3.2L4.8 37l.2.2C4.4 38.4 3.8 39.6 3.3 40.8L3 41l-.2.1C-.4 49.1-1.9 57.4-1.9 64s1.5 14.9 4.7 22.9l.2.1.3.6c.5 1.2 1.1 2.4 1.7 3.6l-.2.2 2.9 3.6-.3.2c.6 1 1.2 2 1.9 3l.3.2.3.2c10.6 18 30.4 30 53 30s42.4-12 53-30l.3-.2.3-.2c.7-1 1.3-2 1.9-3l-.3-.2 2.9-3.6-.2-.2c.6-1.2 1.2-2.4 1.7-3.6l.3-.6.2-.1c3.2-8 4.7-16.3 4.7-22.9s-1.5-14.9-4.7-22.9l-.2-.1-.3-.6c-.5-1.2-1.1-2.4-1.7-3.6l.2-.2z" />
+            <path fill="#fff"
+              d="M64 18c25.4 0 46 20.6 46 46S89.4 110 64 110 18 89.4 18 64s20.6-46 46-46zm-9.8 60.3c2.3 1.4 4.8 2.1 7.6 2.1 4 0 7.2-1.1 9.7-3.3 2.4-2.2 3.9-5.3 4.4-9.2h-6.4c-.4 2.1-1.2 3.7-2.4 4.8-1.2 1.1-2.9 1.7-5 1.7-2.7 0-4.9-1.1-6.5-3.2-1.6-2.1-2.4-5.1-2.4-9s.8-7 2.4-9.2c1.6-2.2 3.8-3.3 6.5-3.3 2.1 0 3.8.6 5 1.7 1.2 1.1 2 2.6 2.4 4.5h6.4c-.5-3.7-2-6.6-4.4-8.7-2.5-2.1-5.7-3.1-9.7-3.1-2.8 0-5.3.7-7.6 2.1-2.3 1.4-4 3.4-5.3 6s-1.9 5.7-1.9 9.3.6 6.7 1.9 9.3 3 4.6 5.3 6z" />
+          </svg>
+          <!-- Java SVG -->
+          <svg class="sk-svg-icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#0074BD"
+              d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969z" />
+            <path fill="#EA2D2E"
+              d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" />
+            <path fill="#0074BD"
+              d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468z" />
+            <path fill="#EA2D2E"
+              d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z" />
+            <path fill="#0074BD"
+              d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" />
+          </svg>
+          <span class="sk-level adv">Advanced</span>
+        </div>
+        <h3>C++ &amp; Java</h3>
+        <p>Proficient in both languages with strong OOP, collections, multithreading, and design patterns. Core
+          languages for competitive programming and system-level thinking.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">OOP</span><span class="sk-tag">STL</span>
+          <span class="sk-tag">Multithreading</span><span class="sk-tag">Design Patterns</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">92%</span>
+          <div class="bar" data-width="92"></div>
+        </div>
+      </div>
+
+      <!-- 02 DSA -->
+      <div class="sk-card" data-cat="cs" style="--skill-color: #00E5FF;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">02</div>
+        <span class="sk-num">#02</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji"></span>
+          <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M2 17l10 5 10-5" stroke="#00e5ff" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M2 12l10 5 10-5" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round" opacity=".6" />
+          </svg>
+          <span class="sk-level adv">Advanced</span>
+        </div>
+        <h3>Data Structures &amp; Algorithms</h3>
+        <p>Strong foundation in arrays, trees, graphs, dynamic programming, and recursion. 300+ problems solved on
+          LeetCode and HackerRank with optimized time complexity.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">Trees / Graphs</span><span class="sk-tag">DP</span>
+          <span class="sk-tag">LeetCode 300+</span><span class="sk-tag">HackerRank</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">88%</span>
+          <div class="bar" data-width="88"></div>
+        </div>
+      </div>
+
+      <!-- 03 MERN -->
+      <div class="sk-card" data-cat="web" style="--skill-color: #83CD29;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">03</div>
+        <span class="sk-num">#03</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji"></span>
+          <!-- React icon -->
+          <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="2.5" fill="#61DAFB" />
+            <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" />
+            <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"
+              transform="rotate(60 12 12)" />
+            <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"
+              transform="rotate(120 12 12)" />
+          </svg>
+          <!-- Node icon -->
+          <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 7v10l9 5 9-5V7L12 2z" stroke="#83CD29" stroke-width="1.3" stroke-linejoin="round" />
+            <path d="M8 10.5V14l4 2 4-2v-3.5L12 13l-4-2.5z" fill="#83CD29" opacity=".4" />
+          </svg>
+          <span class="sk-level int">Intermediate</span>
+        </div>
+        <h3>MERN Stack</h3>
+        <p>Full-stack development with MongoDB, Express.js, React.js, and Node.js. Built dynamic, responsive
+          applications with REST APIs and modern component architecture.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">React.js</span><span class="sk-tag">Node.js</span>
+          <span class="sk-tag">MongoDB</span><span class="sk-tag">REST APIs</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">80%</span>
+          <div class="bar" data-width="80"></div>
+        </div>
+      </div>
+
+      <!-- 04 DevOps -->
+      <div class="sk-card" data-cat="tools" style="--skill-color: #019BC6;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">04</div>
+        <span class="sk-num">#04</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji"></span>
+          <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="7" width="3" height="3" rx=".4" fill="#019BC6" />
+            <rect x="6" y="7" width="3" height="3" rx=".4" fill="#019BC6" />
+            <rect x="10" y="7" width="3" height="3" rx=".4" fill="#019BC6" />
+            <rect x="6" y="3" width="3" height="3" rx=".4" fill="#019BC6" />
+            <rect x="10" y="3" width="3" height="3" rx=".4" fill="#019BC6" />
+            <rect x="10" y="11" width="3" height="3" rx=".4" fill="#019BC6" opacity=".6" />
+            <path d="M2 12c0 3 2 5 6 5h9c3 0 5-2 4-5" stroke="#019BC6" stroke-width="1.2" />
+            <path d="M20 10c1-1 3-1 3 1" stroke="#019BC6" stroke-width="1.2" />
+          </svg>
+          <span class="sk-level int">Intermediate</span>
+        </div>
+        <h3>DevOps &amp; Docker</h3>
+        <p>Containerization with Docker for consistent development and deployment environments. Created and managed
+          containers and images for scalable application deployments.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">Docker</span><span class="sk-tag">Containers</span>
+          <span class="sk-tag">CI/CD Basics</span><span class="sk-tag">Linux</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">76%</span>
+          <div class="bar" data-width="76"></div>
+        </div>
+      </div>
+
+      <!-- 05 SQL -->
+      <div class="sk-card" data-cat="tools" style="--skill-color: #c9a84c;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">05</div>
+        <span class="sk-num">#05</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji"></span>
+          <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="12" cy="5" rx="8" ry="3" stroke="#c9a84c" stroke-width="1.4" />
+            <path d="M4 5v5c0 1.66 3.58 3 8 3s8-1.34 8-3V5" stroke="#c9a84c" stroke-width="1.4" />
+            <path d="M4 10v5c0 1.66 3.58 3 8 3s8-1.34 8-3v-5" stroke="#c9a84c" stroke-width="1.4" />
+            <path d="M4 15v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4" stroke="#00e5ff" stroke-width="1.4" opacity=".7" />
+          </svg>
+          <span class="sk-level adv">Advanced</span>
+        </div>
+        <h3>SQL / Databases</h3>
+        <p>Strong command over relational databases, complex queries, joins, indexing, and normalization. Designed and
+          managed structured data efficiently using MySQL and MongoDB.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">MySQL</span><span class="sk-tag">Joins & Indexing</span>
+          <span class="sk-tag">Normalization</span><span class="sk-tag">MongoDB</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">85%</span>
+          <div class="bar" data-width="85"></div>
+        </div>
+      </div>
+
+      <!-- 06 Networks -->
+      <div class="sk-card" data-cat="cs" style="--skill-color: #A485FF;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">06</div>
+        <span class="sk-num">#06</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji"></span>
+          <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#c9a84c" stroke-width="1.3" />
+            <line x1="2" y1="12" x2="22" y2="12" stroke="#c9a84c" stroke-width="1.3" />
+            <path d="M12 2C9.33 6 8 9 8 12s1.33 6 4 10" stroke="#00e5ff" stroke-width="1.3" />
+            <path d="M12 2c2.67 4 4 7 4 10s-1.33 6-4 10" stroke="#00e5ff" stroke-width="1.3" />
+            <line x1="2" y1="8" x2="22" y2="8" stroke="#c9a84c" stroke-width=".7" opacity=".5" />
+            <line x1="2" y1="16" x2="22" y2="16" stroke="#c9a84c" stroke-width=".7" opacity=".5" />
+          </svg>
+          <span class="sk-level int">Intermediate</span>
+        </div>
+        <h3>Computer Networks</h3>
+        <p>Solid understanding of HTTP, TCP/IP, DNS, and client-server architecture. Applied networking knowledge in API
+          development and web communication protocols.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">HTTP/HTTPS</span><span class="sk-tag">TCP/IP</span>
+          <span class="sk-tag">DNS</span><span class="sk-tag">REST</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">70%</span>
+          <div class="bar" data-width="70"></div>
+        </div>
+      </div>
+
+      <!-- 07 Python -->
+      <div class="sk-card" data-cat="languages" style="--skill-color: #FFE873;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">07</div>
+        <span class="sk-num">#07</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji"></span>
+          <svg class="sk-svg-icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+            <linearGradient id="py1" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientUnits="userSpaceOnUse"
+              gradientTransform="matrix(.563 0 0 .568 -29.215 -655.234)">
+              <stop offset="0" stop-color="#5A9FD4" />
+              <stop offset="1" stop-color="#306998" />
+            </linearGradient>
+            <linearGradient id="py2" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientUnits="userSpaceOnUse"
+              gradientTransform="matrix(.563 0 0 .568 -29.215 -655.234)">
+              <stop offset="0" stop-color="#FFD43B" />
+              <stop offset="1" stop-color="#FFE873" />
+            </linearGradient>
+            <path fill="url(#py1)"
+              d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zm-13.354 7.569c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" />
+            <path fill="url(#py2)"
+              d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.548v23.515c0 6.693 5.818 10.614 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268z" />
+          </svg>
+          <span class="sk-level int">Intermediate</span>
+        </div>
+        <h3>Python</h3>
+        <p>Proficient in Python for scripting, automation, backend development, and data handling. Used in academic
+          projects for logic-intensive and data science tasks.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">Scripting</span><span class="sk-tag">Automation</span>
+          <span class="sk-tag">Data Science</span><span class="sk-tag">Flask Basics</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">75%</span>
+          <div class="bar" data-width="75"></div>
+        </div>
+      </div>
+
+      <!-- 08 OS -->
+      <div class="sk-card" data-cat="cs" style="--skill-color: #FF4081;">
+        <div class="sk-glass-inner"></div>
+        <div class="bg-n">08</div>
+        <span class="sk-num">#08</span>
+        <div class="sk-icon-wrap">
+          <span class="sk-emoji"></span>
+          <svg class="sk-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="3" width="20" height="14" rx="2" stroke="#c9a84c" stroke-width="1.4" />
+            <path d="M8 21h8M12 17v4" stroke="#c9a84c" stroke-width="1.4" />
+            <circle cx="7" cy="10" r="1.5" fill="#00e5ff" opacity=".7" />
+            <circle cx="12" cy="10" r="1.5" fill="#c9a84c" opacity=".7" />
+            <circle cx="17" cy="10" r="1.5" fill="#00e5ff" opacity=".5" />
+            <line x1="2" y1="7" x2="22" y2="7" stroke="#c9a84c" stroke-width=".8" opacity=".5" />
+          </svg>
+          <span class="sk-level int">Intermediate</span>
+        </div>
+        <h3>Operating Systems</h3>
+        <p>Core OS concepts including processes, threads, scheduling, memory management, deadlocks, and file systems.
+          Applied in system-level analysis and design.</p>
+        <div class="sk-tags">
+          <span class="sk-tag">Processes</span><span class="sk-tag">Memory Mgmt</span>
+          <span class="sk-tag">Scheduling</span><span class="sk-tag">Linux</span>
+        </div>
+        <div class="bar-wrap"><span class="bar-pct">70%</span>
+          <div class="bar" data-width="70"></div>
+        </div>
+      </div>
+
+    </div><!-- /sk-grid -->
+
+  </section>
+
+  <!-- PROJECTS - Enhanced -->
+  <section id="projects" class="section">
+    <div style="max-width:1200px;margin:0 auto 4rem;" class="reveal">
+      <p class="sec-label">Academic &amp; Personal Work</p>
+      <div class="sec-head">
+        <h2>My <em>projects</em></h2>
+      </div>
+    </div>
+
+    <div class="pj-bento-grid">
+      <!-- Project 1 (Featured Span 2) -->
+      <div class="pj-bento-card featured reveal">
+        <div class="pj-bento-img-wrap">
+          <img src="room.jpg" class="pj-bento-img" alt="LearnPath Preview" />
+          <div class="pj-bento-tags absolute-top">
+            <span class="pj-bento-pill">Full Stack</span>
+            <span class="pj-bento-pill">EdTech</span>
+          </div>
+        </div>
+        <div class="pj-bento-foot">
+          <div class="pj-bento-info">
+            <h3 class="pj-bento-title">LearnPath</h3>
+            <p class="pj-bento-desc">Dynamic learning path recommendation system that suggests self-curated, self-paced
+              courses tailored to individual learning styles and goals for enhanced understanding and retention.</p>
+            <span class="pj-bento-yr">2024</span>
+          </div>
+          <a href="https://github.com/kundan9199/LearnPath-Dynamic-Learning-Path-Recommendation-System.git"
+            target="_blank" class="pj-bento-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 (Span 1) -->
+      <div class="pj-bento-card reveal">
+        <div class="pj-bento-img-wrap">
+          <img src="Zaz.jpg" class="pj-bento-img" alt="Zaz Preview" />
+          <div class="pj-bento-tags absolute-top">
+            <span class="pj-bento-pill">AI Platform</span>
+          </div>
+        </div>
+        <div class="pj-bento-foot">
+          <div class="pj-bento-info">
+            <h3 class="pj-bento-title">Aether</h3>
+            <p class="pj-bento-desc">AI-powered conversational e-commerce platform where customers place orders through
+              an intelligent chatbot.</p>
+            <span class="pj-bento-yr">2025</span>
+          </div>
+          <a href="#" target="_blank" class="pj-bento-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 (Span 1) -->
+      <div class="pj-bento-card reveal">
+        <div class="pj-bento-img-wrap">
+          <img src="Nathan Bolger.jpg" class="pj-bento-img" alt="Portfolio v2 Preview" />
+          <div class="pj-bento-tags absolute-top">
+            <span class="pj-bento-pill">UI Design</span>
+          </div>
+        </div>
+        <div class="pj-bento-foot">
+          <div class="pj-bento-info">
+            <h3 class="pj-bento-title">NetKar Interface</h3>
+            <p class="pj-bento-desc">High-end personal portfolio utilizing responsive bento grids, glassmorphism, and
+              minimal interactions.</p>
+            <span class="pj-bento-yr">2025</span>
+          </div>
+          <a href="#" target="_blank" class="pj-bento-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Merged with About Section above -->
+  </section>
+
+  <!-- CERTIFICATIONS & TOOLS -->
+  <section id="test" class="section">
+    <div style="max-width:1100px;margin:0 auto 3.5rem;" class="reveal">
+      <p class="sec-label">Credentials</p>
+      <div class="sec-head">
+        <h2>Certs &amp; <em>tools</em></h2>
+      </div>
+    </div>
+
+    <div style="max-width:1100px;margin:0 auto;">
+
+      <!-- 4 CERT CARDS — 2×2 GRID -->
+      <div class="cert-grid reveal">
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-icon-box" style="background:rgba(0,229,255,.08);color:var(--cyan);">C</div>
+            <div>
+              <h4>Interpersonal Communication for Engineering Leaders</h4>
+              <p>Coursera · Rice University</p>
+            </div>
+          </div>
+          <p class="cert-desc">Covers leadership, personal branding, influencing techniques, and professional
+            communication strategies for engineers stepping into leadership roles.</p>
+          <div class="cert-foot">
+            <span class="cert-date">March 2026</span>
+            <a href="https://coursera.org/share/f20c19ab363604e4df242ba32dcdce42" target="_blank" class="cert-link">View
+              &#8599;</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-icon-box" style="background:rgba(57,255,96,.08);color:var(--green);">G</div>
+            <div>
+              <h4>Data Science using Python</h4>
+              <p>Google</p>
+            </div>
+          </div>
+          <p class="cert-desc">Covers Python for data science workflows, responsive web design fundamentals, and AI
+            integration techniques in real-world applications.</p>
+          <div class="cert-foot">
+            <span class="cert-date">October 2025</span>
+            <span class="cert-badge">Google</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-icon-box" style="background:rgba(201,168,76,.08);color:var(--gold);">A</div>
+            <div>
+              <h4>Cybersecurity for Everyone</h4>
+              <p>Coursera · University of Maryland</p>
+            </div>
+          </div>
+          <p class="cert-desc">Course provides background in information technology, whether a novice or active in the
+            cybersecurity field engineers and computer scientists will learn the broader context and business aspects of
+            cybersecurity.</p>
+          <div class="cert-foot">
+            <span class="cert-date">Feb 2026</span>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/66888262" target="_blank"
+              class="cert-link">View &#8599;</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-icon-box" style="background:rgba(201,168,76,.08);color:var(--gold);">M</div>
+            <div>
+              <h4>Database Management</h4>
+              <p>Oracle University · Oracle MyLearn</p>
+            </div>
+          </div>
+          <p class="cert-desc">This course provides fundamental concepts of AI, Machine
+            Learning, Deep Learning and Generative AI with a specific focus on the practical application of these
+            technologies within Oracle Cloud Infrastructure</p>
+          <div class="cert-foot">
+            <span class="cert-date">Feb 2026</span>
+            <a href="https://mylearn.oracle.com/ou/learning-path/become-a-oci-ai-foundations-associate-2025/147781"
+              target="_blank" class="cert-link">View &#8599;</a>
+          </div>
+        </div>
+
+      </div><!-- /cert-grid -->
+
+      <!-- SKILLS ZONE -->
+      <div class="skills-zone reveal">
+        <p class="skills-zone-title">// Tools &amp; Technologies</p>
+        <div class="skills-logo-grid">
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+              alt="C++" /><span>C++</span></div>
+          <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="Java" /><span>Java</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python" /><span>Python</span></div>
+          <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React.js" /><span>React.js</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js" /><span>Node.js</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js"
+              style="filter:invert(0.5)" /><span>Express.js</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB" /><span>MongoDB</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              alt="Docker" /><span>Docker</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+              alt="VS Code" /><span>VS Code</span></div>
+          <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+              alt="Linux" /><span>Linux</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+              alt="Postman" /><span>Postman</span></div>
+          <div class="skill-pill"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+              alt="Firebase" /><span>Firebase</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact" class="ct">
+
+    <!-- ANIMATED CANVAS -->
+    <canvas id="ct-canvas"></canvas>
+    <div class="ct-glow"></div>
+
+    <div class="ct-wrap">
+
+      <!-- MEGA HEADLINE -->
+      <div class="ct-hero">
+        <div class="ct-hero-bg-text">CONTACT</div>
+        <h1 class="ct-h1">
+          <span class="l1">LET'S</span>
+          <span class="l2">BUILD</span>
+          <span class="l3">TOGETHER</span>
+        </h1>
+        <p class="ct-sub">
+          Fresh out of college and ready to contribute from day one.
+          If you're looking for a driven fresher who ships clean, thoughtful work —
+          I'd love to be part of your team. Don't hesitate to reach out.
+        </p>
+      </div>
+
+      <!-- MAIN GRID -->
+      <div class="ct-grid">
+
+        <!-- ── LEFT: info + form ── -->
+        <div>
+
+          <!-- contact info cards -->
+          <div class="ct-info-row">
+            <div class="ct-info-card">
+              <div class="ic-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <polyline points="2,4 12,13 22,4" />
+                </svg>
+                Email
+              </div>
+              <a href="mailto:harshshuklaji580@gmail.com" class="ic-val"
+                style="font-size:.78rem;">harshshuklaji580@gmail.com</a>
+            </div>
+            <div class="ct-info-card">
+              <div class="ic-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Location
+              </div>
+              <div class="ic-val">Lucknow, Uttar Pradesh</div>
+            </div>
+            <div class="ct-info-card">
+              <div class="ic-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+                </svg>
+                Phone
+              </div>
+              <div class="ic-val">+91 88585 54901</div>
+            </div>
+            <div class="ct-info-card">
+              <div class="ic-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+                Availability
+              </div>
+              <div class="ic-val" style="color:var(--green);">Immediate Joiner</div>
+            </div>
+          </div>
+
+          <!-- response time -->
+          <div class="ct-resp">
+            <div class="ct-resp-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+              </svg>
+            </div>
+            <div class="ct-resp-body">
+              <h4>Usually responds within 24 hours</h4>
+              <p>Best reached via email or LinkedIn · Mon – Sat, 10AM – 8PM IST</p>
+              <div class="ct-resp-meter">
+                <div class="ct-resp-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- big email button -->
+          <a href="mailto:harshshuklaji580@gmail.com" class="ct-email-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <polyline points="2,4 12,13 22,4" />
+            </svg>
+            Send Me An Email
+          </a>
+
+          <!-- contact form -->
+          <div class="ct-form">
+            <div class="ct-form-title">quick_message.send()</div>
+            <div class="form-row">
+              <div class="form-field">
+                <label>Name <span class="req">*</span></label>
+                <input type="text" placeholder="Your full name" />
+              </div>
+              <div class="form-field">
+                <label>Email <span class="req">*</span></label>
+                <input type="email" placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label>Subject</label>
+                <select>
+                  <option value="" disabled selected>Select a topic</option>
+                  <option>Job Opportunity</option>
+                  <option>Internship Offer</option>
+                  <option>Freelance Project</option>
+                  <option>Collaboration</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label>Company / College</label>
+                <input type="text" placeholder="Optional" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Message <span class="req">*</span></label>
+              <textarea placeholder="Hi Harsh, I'd like to discuss..."></textarea>
+            </div>
+            <div class="form-submit">
+              <button class="btn-send" type="button" onclick="handleSend(this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+                Transmit Message
+              </button>
+              <span class="form-note">// No spam. Ever.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── RIGHT: socials + cv + open to work ── -->
+        <div>
+
+          <p class="ct-soc-title">Find me across the web</p>
+
+          <div class="ct-soc-grid">
+
+            <!-- LinkedIn -->
+            <a class="soc" href="https://www.linkedin.com/in/harsh-shukla-dev/" target="_blank">
+              <div class="soc-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="#0A66C2">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <span class="soc-name">LinkedIn</span>
+              <span class="soc-handle">harsh-shukla-dev</span>
+              <span class="soc-ext">↗ Connect</span>
+            </a>
+
+            <!-- GitHub -->
+            <a class="soc" href="https://github.com/HarshS171" target="_blank">
+              <div class="soc-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="var(--cream)">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              </div>
+              <span class="soc-name">GitHub</span>
+              <span class="soc-handle">HarshS171</span>
+              <span class="soc-ext">↗ Follow</span>
+            </a>
+
+            <!-- HackerRank -->
+            <a class="soc" href="https://www.hackerrank.com/profile/harsh_s71" target="_blank">
+              <div class="soc-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="#00EA64">
+                  <path
+                    d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 11.885 0 13S13.285 24 12 24 2.253 19.115 1.608 18c-.645-1.115-.645-11.885 0-13C2.253 3.886 10.715 0 12 0zm2.205 6.015h-1.02c-.135 0-.181.045-.181.18v4.24c-.254-.416-.494-.802-.734-1.188l-1.01-1.631-.91-1.472-.428-.694a.217.217 0 00-.195-.12H8.698c-.135 0-.18.046-.18.181v11.97c0 .136.045.181.18.181h1.065c.135 0 .18-.045.18-.18V9.55c.271.44.511.845.766 1.25l.99 1.607.944 1.533.93 1.503.389.631c.046.075.105.12.196.12h1.052c.135 0 .196-.045.196-.18V6.195c.015-.135-.045-.18-.196-.18z" />
+                </svg>
+              </div>
+              <span class="soc-name">HackerRank</span>
+              <span class="soc-handle">harsh_s71</span>
+              <span class="soc-ext">↗ Profile</span>
+            </a>
+
+            <!-- Instagram -->
+            <a class="soc" href="https://www.instagram.com/harsh_sr71/" target="_blank">
+              <div class="soc-icon-wrap">
+                <svg viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#f09433" />
+                      <stop offset="50%" stop-color="#dc2743" />
+                      <stop offset="100%" stop-color="#bc1888" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#ig)"
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+              </div>
+              <span class="soc-name">Instagram</span>
+              <span class="soc-handle">harsh_sr71</span>
+              <span class="soc-ext">↗ Follow</span>
+            </a>
+
+            <!-- LeetCode -->
+            <a class="soc" href="https://leetcode.com/u/Harsh_S10/" target="_blank">
+              <div class="soc-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="#FFA116">
+                  <path
+                    d="M13.483 0a1.374 1.374 0 00-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 00-1.209 2.104 5.35 5.35 0 00-.125.513 5.527 5.527 0 00.062 2.362 5.83 5.83 0 00.349 1.017 5.938 5.938 0 00 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 00-1.951-.003l-2.396 2.392a3.021 3.021 0 01-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 01.066-.523 2.545 2.545 0 01.619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 00-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0013.483 0zm-2.866 12.815a1.38 1.38 0 00-1.38 1.382 1.38 1.38 0 001.38 1.382H20.79a1.38 1.38 0 001.38-1.382 1.38 1.38 0 00-1.38-1.382z" />
+                </svg>
+              </div>
+              <span class="soc-name">LeetCode</span>
+              <span class="soc-handle">Harsh_S10</span>
+              <span class="soc-ext">↗ Profile</span>
+            </a>
+
+            <!-- Twitter / X -->
+            <a class="soc" href="https://x.com/Harsh_S171" target="_blank">
+              <div class="soc-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="var(--cream)">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </div>
+              <span class="soc-name">Twitter</span>
+              <span class="soc-handle">@Harsh_S171</span>
+              <span class="soc-ext">↗ Follow</span>
+            </a>
+
+          </div>
+
+          <!-- CV download -->
+          <a class="ct-cv" href="HarshCV.pdf" download>
+            <div class="cv-l">
+              <div class="cv-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2">
+                  <path d="M12 15V3m0 12l-4-4m4 4l4-4" />
+                  <path d="M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
+                </svg>
+              </div>
+              <div>
+                <span class="cv-label">Download Resume</span>
+                <span class="cv-sub">HarshCV.pdf &nbsp;·&nbsp; PDF Format</span>
+              </div>
+            </div>
+            <span class="cv-badge">&#8595; GET CV</span>
+          </a>
+
+          <!-- open to work card -->
+          <div class="ct-otw">
+            <div class="otw-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2">
+                <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
+                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+              </svg>
+            </div>
+            <div class="otw-body">
+              <h4>Open to Work — Immediate Joiner</h4>
+              <p>Looking for full-time roles in Software Development,<br>Web Dev, or Data Science. Relocatable across
+                India.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- /ct-grid -->
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 HARSH SHUKLA. All rights reserved.</p>
+    <div class="ft-links">
+      <a href="#hero">&#8593; Top</a>
+      <a href="harshshuklaji580@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/harsh-shukla-dev/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+  <script src="portfolio.js"></script>
 </body>
+
 </html>
